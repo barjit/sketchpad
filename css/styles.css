@@ -1,0 +1,19 @@
+
+#container {
+    background: #58989D;
+    margin: 50px auto;
+    width: 960px;
+    height: auto;
+}
+
+.box {
+    background: #9b59b6;
+    display: inline-block;
+    border: 1pt solid #000;
+}
+
+.box-top {
+    background: #2c3e50;
+    display: inline-block;
+    border: 1pt solid #1abc9c;
+}
