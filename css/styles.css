@@ -1,19 +1,43 @@
 
+
 #container {
     background: #58989D;
-    margin: 50px auto;
+    margin: 0 auto;
     width: 960px;
-    height: auto;
+    height: 960px;
+    overflow: hidden;
+    line-height: 72%;
 }
 
 .box {
     background: #9b59b6;
     display: inline-block;
-    border: 1pt solid #000;
 }
 
 .box-top {
     background: #2c3e50;
     display: inline-block;
-    border: 1pt solid #1abc9c;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: block;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    width: 155px;
 }

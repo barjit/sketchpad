@@ -1,12 +1,34 @@
 $(document).ready(function() {
-	var input = 32;
-	input = parseInt(prompt('Please enter a number between 1 and 100'));
-	FillGrid(input);
-	ChangeColor();
+	var input = 64;
+	Populate(input);
+	React();
+
+	$('#reset').click(function(){
+		$('.box').remove();
+		//Call Functions to re-fill our container
+		Populate(input);
+		React();
+	});
+
+	$('#choose').click(function(){
+		$('.box-top').remove();
+		input = parseInt(prompt('Please enter a number between 1 and 100'));
+		if (input > 100) {
+			input = 100;
+		}
+		else if (input < 1) {
+			input = 1;
+		}
+		else {
+			Populate(input);
+			React();
+		}
+	});
+
 });
 
 
-function FillGrid(boxCount){
+function Populate(boxCount){
 	//For loop fills the grid
 	for (var i = 0; i<(boxCount*boxCount); i++) {
 		$('<div/>', {'class': 'box',}).appendTo('#container');
@@ -16,11 +38,11 @@ function FillGrid(boxCount){
 	$('.box').css({'width' : boxSize,'height': boxSize});
 }
 
-function ChangeColor(){
+function React(){
 	$('.box').mouseenter(function(){	
 		$(this).addClass('box-top');
 		$(this).mouseleave(function(){
-			$(this).fadeTo('slow', 0.7);			
+			$(this).fadeTo('fast', 0.7);			
 		});
 	});
 }
