@@ -38,7 +38,7 @@ $(document).ready(function() {
 	//input and the 'Colour()' function is called.
 
 	$('#random').click(function() {
-		$('box-top').remove();
+		$('.box-top').remove();
 		input = parseInt(prompt('Please enter a number between 1 and 64'));
 		if (input > 64) {
 			input = 64;
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	//input and the 'Shade()' function is called.
 
 	$('#opacity').click(function() {
-		$('box-top').remove();
+		$('.box-top').remove();
 		input = parseInt(prompt('Please enter a number between 1 and 64'));
 		if (input > 64) {
 			input = 64;
